@@ -2,7 +2,7 @@ import React from 'react'
 
 const SingleProduct = ({ name, properties }) => {
   return (
-    <div style={{border: '2px solid #000', margin: '1rem 0'}}>
+    <div style={{padding: '0 1rem' ,border: '2px solid #000', margin: '1rem 0'}}>
       <p>{name}</p>
       <ul>
         {properties.map((item) => {
