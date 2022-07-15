@@ -1,7 +1,7 @@
 import React from "react";
 import Products from "./Products";
 
-const Buttons = ({ links, product, setProduct }) => {
+const Buttons = ({ links, product, setProduct, loading, setLoading }) => {
   return (
     <div>
       {links.map((item, index) => {
@@ -9,9 +9,11 @@ const Buttons = ({ links, product, setProduct }) => {
         const itemName = itemSplitted[itemSplitted.length - 1];
 
         function handleFetch() {
+          setLoading(true);
           window.fetch(item).then((r) =>
             r.json().then((prod) => {
               setProduct(prod);
+              setLoading(false);
             })
           );
         }
@@ -26,7 +28,9 @@ const Buttons = ({ links, product, setProduct }) => {
           </button>
         );
       })}
-      <Products product={product}/>
+
+      {loading && <p>Loading...</p>}
+      {!loading && <Products product={product} />}
     </div>
   );
 };
