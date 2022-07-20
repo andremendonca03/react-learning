@@ -10,10 +10,13 @@ const Product = ({ product }) => {
       .then((rJSON) => setData(rJSON));
   });
 
+  if (!data) {
+    return null;
+  }
   return (
     <div className="product">
-      <h1>{data && data.nome}</h1>
-      <p>{data && data.preco}</p>
+      <h1>{data.nome}</h1>
+      <p>{data.preco}</p>
     </div>
   );
 };
