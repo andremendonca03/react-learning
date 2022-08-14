@@ -8,7 +8,7 @@ const FormComponent = () => {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    console.log(form);
+
     const response = await fetch("https://ranekapi.origamid.dev/json/api/usuario", {
       method: "POST",
       headers: {
@@ -16,10 +16,8 @@ const FormComponent = () => {
       },
       body: JSON.stringify(form),
     });
-    console.log(JSON.stringify(form));
     
     const responseJSON = await response.json();
-    console.log(responseJSON);
 
     if (!response.ok) {
       resultMessage.current.innerText = responseJSON.message;

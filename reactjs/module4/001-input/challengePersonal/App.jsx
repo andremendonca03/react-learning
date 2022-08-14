@@ -1,40 +1,26 @@
 import React from "react";
-import { GlobalStorage, GlobalContext } from "./GlobalStorage";
-import InputField from "./InputField";
+import { GlobalStorage } from "./GlobalStorage";
 import FormComponent from "./FormComponent";
 
 /*
-// Faça um fetch (POST) para a API abaixo
-// Para a criação ser aceita é necessário enviar dodos de:
+// Do a fetch (POST) to the API below
+// In order to create the post, all the data below is required in an object:
 // nome, email, senha, cep, rua, numero, bairro, cidade e estado
 
-// Essa é a função utilizada para realizar o POST
+// This is the function that should be used to do the POST:
 fetch('https://ranekapi.origamid.dev/json/api/usuario', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
   },
-  // form é o objeto com os dados do formulário
+  // form is the object containing the form data
   body: JSON.stringify(form),
 });
 
-// Mostre uma mensagem na tela, caso a resposta da API seja positiva
+// Show a message on the screen whether the API response is positive or not.
 */
 
 const App = () => {
-  function handleSubmit(e) {
-    e.preventDefault();
-
-  /*  fetch("https://ranekapi.origamid.dev/json/api/usuario", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(form),
-    });
-    console.log(form);*/
-  }
-
   return (
     <GlobalStorage>
       <FormComponent />
