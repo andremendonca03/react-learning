@@ -5,8 +5,8 @@ const App = () => {
 
   return (
     <div>
-      <select id="product" onChange={({ target }) => setSelected(target.value)}>
-        <option selected disabled value="">
+      <select id="product" value={selected} onChange={({ target }) => setSelected(target.value)}>
+        <option disabled value="">
           Select:
         </option>
         <option value="laptop">Laptop</option>
