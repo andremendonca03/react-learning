@@ -39,10 +39,20 @@ export const GlobalStorage = ({ children }) => {
   ];
 
   const [actualQNumber, setActualQNumber] = React.useState(0);
+  const [checked, setChecked] = React.useState("");
+  const [answers, setAnswers] = React.useState([]);
 
   return (
     <GlobalContext.Provider
-      value={{ actualQNumber, setActualQNumber, questions }}
+      value={{
+        actualQNumber,
+        setActualQNumber,
+        checked,
+        setChecked,
+        answers,
+        setAnswers,
+        questions,
+      }}
     >
       {children}
     </GlobalContext.Provider>
