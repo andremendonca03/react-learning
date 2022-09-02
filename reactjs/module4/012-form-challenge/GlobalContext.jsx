@@ -41,6 +41,7 @@ export const GlobalStorage = ({ children }) => {
   const [actualQNumber, setActualQNumber] = React.useState(0);
   const [checked, setChecked] = React.useState("");
   const [answers, setAnswers] = React.useState([]);
+  const [corrects, setCorrects] = React.useState(0);
 
   return (
     <GlobalContext.Provider
@@ -51,6 +52,8 @@ export const GlobalStorage = ({ children }) => {
         setChecked,
         answers,
         setAnswers,
+        corrects,
+        setCorrects,
         questions,
       }}
     >
