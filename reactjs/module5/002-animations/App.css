@@ -1,0 +1,12 @@
+.product {
+  opacity: 0;
+  translate: -20px;
+  animation: slideLeft .3s forwards;
+}
+
+@keyframes slideLeft {
+  to {
+    opacity: initial;
+    translate: initial;
+  }
+}
