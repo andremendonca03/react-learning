@@ -1,0 +1,15 @@
+.productsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0px auto;
+  background-color: rgb(229, 99, 99);
+  .productsNav {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    a {
+      padding: 5px 8px;
+    }
+  }
+}
