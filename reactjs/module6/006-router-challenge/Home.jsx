@@ -1,16 +1,22 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styles from "./Home.module.css";
+import NavBar from './components/NavBar';
 
-const Home = () => {
+const Home = ({products, }) => {
+
   return (
     <section className={styles.productsContainer}>
-      <nav className={styles.productsNav}>
-        <NavLink to="">Products</NavLink>
-        <NavLink to="/contact">Contact</NavLink>
-      </nav>
-      <div>
-
+      <NavBar />
+      <div className={styles.productsList}>
+        {products[0] && products.map(item => {
+          return (
+            <Link to={`product/${item.id}`} className={styles.productSingle} key={item.id}>
+              <img src={item.fotos[0].src} alt="#" />
+              <h2>{item.nome}</h2>
+            </Link>
+          );
+        })}
       </div>
     </section>
   );
