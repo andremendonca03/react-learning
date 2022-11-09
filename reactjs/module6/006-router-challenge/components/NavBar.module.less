@@ -1,0 +1,17 @@
+.productsNav {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  display: flex;
+  a {
+    max-width: fit-content;
+    background-color: #dfdfdf;
+    padding: 7px 10px;
+    border-radius: 2px;
+    &:not(:last-of-type) {
+      margin-right: 10px;
+    }
+    &:hover {
+      background-color: #cdcccc;
+    }
+  }
+}
